@@ -207,6 +207,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &622765159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 622765160}
+  - component: {fileID: 622765161}
+  m_Layer: 0
+  m_Name: LevelData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &622765160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622765159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &622765161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622765159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9b150225247ab4091b5ecf1201f86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingPositionField:
+  - maxYPosition: 0
+    minYPosition: 11
+    minXPosition: 1
+    maxXPosition: 4
+  - maxYPosition: 0
+    minYPosition: 11
+    minXPosition: -4
+    maxXPosition: -1
+  minChipScale: 0
+  maxChipScale: 0
+  _ballFactories:
+  - prefab: {fileID: 306595458406289288, guid: 0853b51393922314fa915c35948256b9, type: 3}
+    levelProbability: 1
+  - prefab: {fileID: 7350264202177739249, guid: 0e42fa4cf206220418722a2058e7d9a5, type: 3}
+    levelProbability: 0.517
+  - prefab: {fileID: 6053452549685840836, guid: dd648723d0bdb5f41b3b8791944e225b, type: 3}
+    levelProbability: 0.182
+  - prefab: {fileID: 1716873606839352814, guid: fa95c206758a5884f9f2929224a00cac, type: 3}
+    levelProbability: 0
+  - prefab: {fileID: 4122835285562071581, guid: 987d1c62945e0b74bbe8184e4ccb20d1, type: 3}
+    levelProbability: 0
+  - prefab: {fileID: 2856552493710237150, guid: 790f6d696bca7164d9367cb1b1933d11, type: 3}
+    levelProbability: 0
+  - prefab: {fileID: 8282686099120287810, guid: c1e17d95eada6dd4a832c1d8b1cdbf2f, type: 3}
+    levelProbability: 0
+  _barrierFactories:
+  - prefab: {fileID: 4880698406732482104, guid: ed352cbe0b8a12546a001932db48a161, type: 3}
+    levelProbability: 0.335
+  - prefab: {fileID: 3089404003960685363, guid: a05a476a7049150439c7f47fce1bcff8, type: 3}
+    levelProbability: 0.138
+  _much4BallFactory:
+    prefab: {fileID: 0}
+    levelProbability: 0
+  _much5BallFactory:
+    prefab: {fileID: 0}
+    levelProbability: 0
+  _much6BallFactory:
+    prefab: {fileID: 0}
+    levelProbability: 0
 --- !u!1 &882441826
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +336,7 @@ GameObject:
   - component: {fileID: 1057201772}
   - component: {fileID: 1057201773}
   m_Layer: 0
-  m_Name: BallMergeHandler
+  m_Name: BallMergeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,6 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfChips: 10
+  daaaaata: {fileID: 11400000, guid: 6f46b9c2057fff5479dd8d80038fcc33, type: 2}
 --- !u!4 &1438623094
 Transform:
   m_ObjectHideFlags: 0
@@ -684,15 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c4938e69c0b4343a61e1733d113b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingPositionField:
-  - maxYPosition: 0
-    minYPosition: 11
-    minXPosition: 1
-    maxXPosition: 4
-  - maxYPosition: 0
-    minYPosition: 11
-    minXPosition: -4
-    maxXPosition: -1
+  levelData: {fileID: 622765161}
   minScale: 0.8
   maxScale: 1.6
 --- !u!1 &2100689423
