@@ -4,27 +4,14 @@ using UnityEngine;
 
 namespace GameLogic
 {
-    public class BallMergeHandler : MonoBehaviour
+    public class BallMergeHandler : MonoBehaviour, IBallMergeHandler
     {
-        IGameManager GameManager;
-
         List<GameObject> mergeBalls = new List<GameObject>();
         List<GameObject> ballsToRemove = new List<GameObject>();
 
-        void Awake()
+        public void DestroyMergedBalls(ChipFactory[] ballFactories)
         {
-            GameManager = GetComponentInParent<IGameManager>();
-        }
-
-
-        void Update()
-        {
-            DestroyMergedBalls();
-        }
-
-        void DestroyMergedBalls()
-        {
-            foreach (var ballFactory in GameManager.ChipFactoryController.ballFactories)
+            foreach (var ballFactory in ballFactories)
             {
                 ballsToRemove.Clear();
 

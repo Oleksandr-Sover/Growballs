@@ -12,6 +12,8 @@ namespace GameLogic
         [SerializeField]
         int numberOfChips;
 
+        public Datas daaaaata;
+
         void Awake()
         {
             chipFactoryController = GetComponentInChildren<IChipFactoryController>();
